@@ -23,71 +23,7 @@
     <h1>Полари</h1>
     <div id="map" style="background-color: White" />
     <script src="leaflet.js"></script>
-    <script>
-      var image = 'map';
-      var width = 4967;
-      var height = 7092;
-      var maxLevel = 5;
-      var minLevel = 2;
-      var orgLevel = 5;
-
-      // Some weird calculations to fit the image to the initial position
-      // Leaflet has some bugs there. The fitBounds method is not correct for large scale bounds
-      var tileWidth = 256 * Math.pow(2, orgLevel);
-      var radius = tileWidth / 2 / Math.PI;
-      var rx = width - tileWidth / 2;
-      var ry = -height + tileWidth / 2;
-
-      var west = -180;
-      var east = (180 / Math.PI) * (rx / radius);
-      var north = 85.05;
-      var south =
-        (360 / Math.PI) * (Math.atan(Math.exp(ry / radius)) - Math.PI / 4);
-      var rc = (tileWidth / 2 + ry) / 2;
-      var centerLat =
-        (360 / Math.PI) * (Math.atan(Math.exp(rc / radius)) - Math.PI / 4);
-      var centerLon = (west + east) / 2;
-      var bounds = [
-        [south, west],
-        [north, east],
-      ];
-
-      var map = new L.Map('map', { maxBounds: bounds });
-
-      L.tileLayer(image + '/{z}-{x}-{y}.jpg', {
-        maxZoom: maxLevel,
-        minZoom: minLevel,
-        opacity: 1.0,
-        zIndex: 1,
-        noWrap: true,
-        bounds: bounds,
-        attribution:
-          '<a href="https://github.com/oliverheilig/LeafletPano">LeafletPano</a>',
-      }).addTo(map);
-
-      var zoom = map.getBoundsZoom(bounds);
-      var center = new L.latLng(centerLat, centerLon);
-
-      map.setView(center, zoom);
-
-      var LeafIcon = L.Icon.extend({
-        options: {
-          //shadowUrl: 'js/images/marker-shadow.png',
-          iconSize: [30, 30],
-          shadowSize: [35, 35],
-          iconAnchor: [10, 10],
-          shadowAnchor: [10, 10],
-          popupAnchor: [0, -20],
-        },
-      });
-
-      var castle = new LeafIcon({ iconUrl: './images/castle.png' });
-
-      L.marker([35.9, -54.8], { icon: castle })
-        .bindPopup(
-          '<strong>Фаунтерра - первый город, основанный Прародителями в подлунном мире. На данный момент, крупнейший город в мире (360тыс.). На протяжении всей истории лишь раз был захвачен (Багряная Смута), однако правящая династия менялась тем или иным способом четыре раза. <Br>Фаунтерру называют городом двухсот башен, поскольку многие обеспеченные люди пристраивают к своим домам башни, желая сделать их заметными издали, выделиться. Башни приобретают порой очень причудливые формы и расцветки.</strong><br />'
-        )
-        .addTo(map);
-    </script>
+    <script src="BaseLabel.js"></script>
+    <script src="map.js"></script>
   </body>
 </html>
