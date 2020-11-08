@@ -63,3 +63,32 @@ BaseLabel.map((e) => {
     .bindPopup(`<strong>${e.name}<br>${e.description}</strong><br />`)
     .addTo(map);
 });
+
+//remember last position
+var rememberLat = document.getElementById('latitude').value;
+var rememberLong = document.getElementById('longitude').value;
+if (!rememberLat || !rememberLong) {
+  rememberLat = 0;
+  rememberLong = 0;
+}
+
+var marker = L.marker([0, 0], {
+  icon: new LeafIcon({ iconUrl: `./images/castle.svg` }),
+}).addTo(map);
+marker.on('dragend', function (e) {
+  updateLatLng(marker.getLatLng().lat, marker.getLatLng().lng);
+});
+map.on('click', function (e) {
+  marker.setLatLng(e.latlng);
+  updateLatLng(marker.getLatLng().lat, marker.getLatLng().lng);
+});
+function updateLatLng(lat, lng, reverse) {
+  if (reverse) {
+    marker.setLatLng([lat, lng]);
+    map.panTo([lat, lng]);
+  } else {
+    document.getElementById('latitude').value = marker.getLatLng().lat;
+    document.getElementById('longitude').value = marker.getLatLng().lng;
+    map.panTo([lat, lng]);
+  }
+}
