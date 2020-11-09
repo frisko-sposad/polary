@@ -60,7 +60,7 @@ BaseLabel.map((e) => {
   L.marker(e.coordinates, {
     icon: new LeafIcon({ iconUrl: `./images/${e.ico}.svg` }),
   })
-    .bindPopup(`<strong>${e.name}<br>${e.description}</strong><br />`)
+    .bindPopup(`<strong>${e.name}</strong><br>${e.description}<br />`)
     .addTo(map);
 });
 
