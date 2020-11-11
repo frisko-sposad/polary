@@ -20,6 +20,12 @@ const BaseLabel = [
     coordinates: [69.471, -36.958],
     ico: 'castle',
   },
+  {
+    name: 'Спод',
+    description: 'Деревня на крайнем севере в Герцогстве Ориджин.',
+    coordinates: [73.0978, -11.25],
+    ico: 'castle',
+  },
   // Южный Путь
   {
     name: 'Лабелин',
@@ -69,8 +75,7 @@ const BaseLabel = [
   // Нордвуд
   {
     name: 'Клык Медведя',
-    description:
-      'Столица в герцогстве Нортвуд.',
+    description: 'Столица в герцогстве Нортвуд.',
     coordinates: [73.3766, -78.8378],
     ico: 'castle',
   },
@@ -165,7 +170,7 @@ const BaseLabel = [
     description: 'Город в герцогстве Альмера',
     coordinates: [29.0657, -99.84375],
     ico: 'castle',
-  }, 
+  },
   {
     name: 'Пикси',
     description: 'Город в герцогстве Альмера',
@@ -225,7 +230,7 @@ const BaseLabel = [
   {
     name: 'Хемплтон',
     description: 'Город в Землях Короны',
-    coordinates: [39.3300, -55.0634],
+    coordinates: [39.33, -55.0634],
     ico: 'castle',
   },
   {
@@ -237,7 +242,7 @@ const BaseLabel = [
   {
     name: 'Руайльд',
     description: 'Город в Землях Короны',
-    coordinates: [33.2800, -30.7617],
+    coordinates: [33.28, -30.7617],
     ico: 'castle',
   },
   {
@@ -282,136 +287,125 @@ const BaseLabel = [
   // Шиммери
   {
     name: 'Сюрлион',
-    description:
-      '<p>Город в герцогстве Шиммери</p>',
+    description: '<p>Город в герцогстве Шиммери</p>',
     coordinates: [-40.1494, -47.5488],
     ico: 'castle',
   },
   {
     name: 'Лаэм',
-    description:
-      '<p>Столица в герцогстве Шиммери</p>',
+    description: '<p>Столица в герцогстве Шиммери</p>',
     coordinates: [-51.2928, -49.0429],
     ico: 'castle',
   },
   {
     name: 'Пентаго',
-    description:
-      '<p>Столица в герцогстве Шиммери</p>',
+    description: '<p>Столица в герцогстве Шиммери</p>',
     coordinates: [-44.1861, -73.4765],
     ico: 'castle',
   },
   {
     name: 'Оркада',
-    description:
-      '<p>Город в герцогстве Шиммери</p>',
+    description: '<p>Город в герцогстве Шиммери</p>',
     coordinates: [43.129, -59.8095],
     ico: 'castle',
   },
   {
     name: 'Малый Перевал',
-    description:
-      '<p>Город в герцогстве Шиммери</p>',
-    coordinates: [-48.1990, -66.0058],
+    description: '<p>Город в герцогстве Шиммери</p>',
+    coordinates: [-50.2366, -58.0078],
     ico: 'castle',
   },
   {
     name: 'Мелисон',
-    description:
-      '<p>Город в герцогстве Шиммери</p>',
-    coordinates: [-49.0702, -71.6308],
+    description: '<p>Город в герцогстве Шиммери</p>',
+    coordinates: [-48.3160, -59.5898],
     ico: 'castle',
   },
   {
     name: 'Оркада',
-    description:
-      '<p>Город в герцогстве Шиммери</p>',
+    description: '<p>Город в герцогстве Шиммери</p>',
     coordinates: [-52.0288, -76.9921],
     ico: 'castle',
   },
   // Мельницы
   {
     name: 'Фейрис',
-    description:
-      '<p>Столица в герцогстве Мельницы</p>',
+    description: '<p>Столица в герцогстве Мельницы</p>',
     coordinates: [39.8043, -143.2617],
     ico: 'castle',
   },
   {
     name: 'Миннис',
-    description:
-      '<p>Город в герцогстве Мельницы</p>',
+    description: '<p>Город в герцогстве Мельницы</p>',
     coordinates: [37.6446, -147.1289],
     ico: 'castle',
   },
   {
     name: 'Оферт',
-    description:
-      '<p>Город в герцогстве Мельницы</p>',
+    description: '<p>Город в герцогстве Мельницы</p>',
     coordinates: [31.5364, -139.2626],
     ico: 'castle',
   },
   // Шейланд
   {
     name: 'Уэймар',
-    description:
-      '<p>Столица в герцогстве Шейланд</p>',
+    description: '<p>Столица в герцогстве Шейланд</p>',
     coordinates: [56.7737, -95.2294],
     ico: 'castle',
   },
   {
     name: 'Стагфорт',
-    description:
-      '<p>Замок в герцогстве Шейланд</p>',
-    coordinates: [72.6710, -85.2099],
+    description: '<p>Замок в герцогстве Шейланд</p>',
+    coordinates: [72.671, -85.2099],
     ico: 'castle',
   },
   // Закатный Берег
   {
     name: 'Корден',
-    description:
-      '<p>Столица в герцогстве Закатный Берег</p>',
-    coordinates: [63.4087, -111.6650],
+    description: '<p>Столица в герцогстве Закатный Берег</p>',
+    coordinates: [63.4087, -111.665],
     ico: 'castle',
   },
   // Холливел
   {
     name: 'Корден',
-    description:
-      '<p>Столица в герцогстве Холливел</p>',
+    description: '<p>Столица в герцогстве Холливел</p>',
     coordinates: [43.4808, -106.9189],
     ico: 'castle',
   },
   // Дарквотер
   {
     name: 'Нен-Клер',
-    description:
-      '<p>Столица в герцогстве Дарквотер</p>',
+    description: '<p>Столица в герцогстве Дарквотер</p>',
     coordinates: [-27.1031, -117.9492],
     ico: 'castle',
   },
   // Рейс
   {
     name: 'Рей-Рок',
-    description:
-      '<p>Столица в герцогстве Рейс</p>',
+    description: '<p>Столица в герцогстве Рейс</p>',
     coordinates: [9.9634, -115.7958],
     ico: 'castle',
   },
   // Фольтийские о-ва
   {
     name: 'Фольта',
-    description:
-      '<p>Столица Фольтийских островов</p>',
-    coordinates: [-36.9893, -138.1640],
+    description: '<p>Столица Фольтийских островов</p>',
+    coordinates: [-36.9893, -138.164],
     ico: 'castle',
   },
   // Синтийские о-ва
   {
     name: 'Мес-Си',
-    description:
-      '<p>Столица Синтийских островов</p>',
+    description: '<p>Столица Синтийских островов</p>',
     coordinates: [9.4002, -153.9404],
+    ico: 'castle',
+  },
+  // Запределье
+  {
+    name: 'Форт',
+    description: '<p></p>',
+    coordinates: [76.587, 12.4804],
     ico: 'castle',
   },
   // Святые места и монастыри
@@ -436,7 +430,7 @@ const BaseLabel = [
   {
     name: 'Собор Св. Агаты',
     description: '',
-    coordinates: [68.3809, -21.6650],
+    coordinates: [68.3809, -21.665],
     ico: 'monastery',
   },
   {
@@ -524,7 +518,7 @@ const BaseLabel = [
     description: '',
     coordinates: [-28.0816, -124.8925],
     ico: 'progenitor',
-  },  
+  },
   {
     name: 'Роща брабусов',
     description: '',
@@ -534,7 +528,7 @@ const BaseLabel = [
   {
     name: 'Оазис "Тот Самый"',
     description: '',
-    coordinates: [10.8710, -79.1894],
+    coordinates: [10.871, -79.1894],
     ico: 'progenitor',
   },
   {
@@ -574,4 +568,120 @@ const BaseLabel = [
     coordinates: [75.7142, 14.1064],
     ico: 'spiral',
   },
+  // Битвы
+  {
+    name: 'Нападение на форт',
+    description: '',
+    coordinates: [76.3194, 11.9091],
+    ico: 'battle',
+  },
+  {
+    name: 'Мятеж кайров',
+    description: '',
+    coordinates: [74.9008, 3.5595],
+    ico: 'battle',
+  },
+  {
+    name: 'Осада Дойла и Турнир',
+    description: '',
+    coordinates: [58.1678, -52.5146],
+    ico: 'battle',
+  },
+  {
+    name: 'Битва на Мудрой реке',
+    description: '',
+    coordinates: [57.9352, -43.33],
+    ico: 'battle',
+  },
+  {
+    name: 'Битва при Уиндли',
+    description: '',
+    coordinates: [56.1669, -38.9355],
+    ico: 'battle',
+  },
+  {
+    name: 'Нападение на Миру',
+    description: '',
+    coordinates: [72.7884, -83.4960],
+    ico: 'battle',
+  },
+  {
+    name: 'Битва за Лабелин',
+    description: '',
+    coordinates: [52.9055, -51.7675],
+    ico: 'battle',
+  },
+  {
+    name: 'Битва при Пикси',
+    description: '',
+    coordinates: [48.9766, -54.2285],
+    ico: 'battle',
+  },
+  {
+    name: 'Финал похода Салема из Саммерсвита',
+    description: 'Минерва успела до начала битвы, объвила переговоры и тем самым избежала сражения.',
+    coordinates: [39.3640, -53.0419],
+    ico: 'battle',
+  },
+  {
+    name: 'Катастрофа поезда',
+    description: 'Место разрушения моста и падения поезда',
+    coordinates: [35.7420, -76.8330],
+    ico: 'battle',
+  },
+  {
+    name: 'Похищение предметов династии',
+    description: '',
+    coordinates: [30.5953, -61.6552],
+    ico: 'battle',
+  },
+  {
+    name: 'Атака на Эвергард',
+    description: '',
+    coordinates: [32.4309, -89.5166],
+    ico: 'battle',
+  },
+  {
+    name: 'Переговоры с послами Орды',
+    description: '',
+    coordinates: [8.4886, -81.6503],
+    ico: 'battle',
+  },
+  {
+    name: 'Битва при Мелоранже',
+    description: '',
+    coordinates: [-6.6755, -57.7441],
+    ico: 'battle',
+  },
+  {
+    name: 'Магда против Солнечного полка',
+    description: '',
+    coordinates: [-50.2647, -45.6152],
+    ico: 'battle',
+  },
+  // Встречи
+  {
+    name: 'Встреча Джоакина с Ионой',
+    description: '',
+    coordinates: [47.6616, -74.5312],
+    ico: 'roadpost',
+  },
+  {
+    name: 'Встреча Джоакина с Хармоном в Смолдене',
+    description: 'После потешного турнира, торговец Хармон нанимает Джоакина в охранники',
+    coordinates: [32.9856, -71.3429],
+    ico: 'roadpost',
+  },
+  {
+    name: 'Ночь в таверне Баклеров',
+    description: '',
+    coordinates: [36.6287, -91.8896],
+    ico: 'roadpost',
+  }, 
+  {
+    name: 'Встреча Хармона с Охотником и шаванами',
+    description: '',
+    coordinates: [-41.3479, -74.6191],
+    ico: 'roadpost',
+  }, 
 ];
