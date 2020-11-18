@@ -359,7 +359,7 @@ const BaseLabel = [
   },
   // Закатный Берег
   {
-    name: 'Корден',
+    name: 'Сайленс',
     description: '<p>Столица в герцогстве Закатный Берег</p>',
     coordinates: [63.4087, -111.665],
     ico: 'castle',
