@@ -595,7 +595,7 @@ const BaseLabel = [
   {
     name: 'Битва при Уиндли',
     description: '',
-    coordinates: [56.1669, -38.9355],
+    coordinates: [58.9018, -35.1562],
     ico: 'battle',
   },
   {
