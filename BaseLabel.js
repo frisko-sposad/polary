@@ -245,7 +245,7 @@ const BaseLabel = [
     ico: 'castle',
   },
   {
-    name: 'Хемплтон',
+    name: 'Хемптон',
     description: 'Город в Землях Короны',
     coordinates: [39.33, -55.0634],
     ico: 'castle',
