@@ -17,8 +17,7 @@ var east = (180 / Math.PI) * (rx / radius);
 var north = 85.05;
 var south = (360 / Math.PI) * (Math.atan(Math.exp(ry / radius)) - Math.PI / 4);
 var rc = (tileWidth / 2 + ry) / 2;
-var centerLat =
-  (360 / Math.PI) * (Math.atan(Math.exp(rc / radius)) - Math.PI / 4);
+var centerLat = (360 / Math.PI) * (Math.atan(Math.exp(rc / radius)) - Math.PI / 4);
 var centerLon = (west + east) / 2;
 var bounds = [
   [south, west],
@@ -27,6 +26,18 @@ var bounds = [
 
 var map = new L.Map('map', { maxBounds: bounds });
 
+// шкала
+var scale = L.control.scale({
+  position: 'topleft',
+  maxWidth: 100,
+  metric: false,
+  imperial: true,
+  updateWhenIdle: true,
+}); // Creating scale control
+
+scale.addTo(map); // Adding scale control to the map
+//шкала
+
 L.tileLayer(image + '/{z}-{x}-{y}.jpg', {
   maxZoom: maxLevel,
   minZoom: minLevel,
@@ -34,8 +45,7 @@ L.tileLayer(image + '/{z}-{x}-{y}.jpg', {
   zIndex: 1,
   noWrap: true,
   bounds: bounds,
-  attribution:
-    '<a href="https://github.com/oliverheilig/LeafletPano">LeafletPano</a>',
+  attribution: '<a href="https://github.com/oliverheilig/LeafletPano">LeafletPano</a>',
 }).addTo(map);
 
 var zoom = map.getBoundsZoom(bounds);
