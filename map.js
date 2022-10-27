@@ -66,6 +66,11 @@ var LeafIcon = L.Icon.extend({
 
 var castle = new LeafIcon({ iconUrl: './images/castle.png' });
 
+// var markers = L.markerClusterGroup();
+// markers.addTo(map);
+
+// console.log(markers);
+
 BaseLabel.map((e) => {
   L.marker(e.coordinates, {
     icon: new LeafIcon({ iconUrl: `./images/${e.ico}.svg` }),
