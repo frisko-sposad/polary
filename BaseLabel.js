@@ -452,7 +452,7 @@ const BaseLabel = [
     name: 'Фольта',
     description: '<p>Столица Фольтийских островов</p>',
     coordinates: [-36.9893, -138.164],
-    ico: 'castle',
+    ico: 'town',
   },
   // Синтийские о-ва
   {
