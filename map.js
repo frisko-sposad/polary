@@ -66,18 +66,70 @@ var LeafIcon = L.Icon.extend({
 
 var castle = new LeafIcon({ iconUrl: './images/castle.png' });
 
-// var markers = L.markerClusterGroup();
-// markers.addTo(map);
-
-// console.log(markers);
-
-BaseLabel.map((e) => {
+const settlementsArr = settlements.map((e) =>
   L.marker(e.coordinates, {
     icon: new LeafIcon({ iconUrl: `./images/${e.ico}.svg` }),
-  })
-    .bindPopup(`<strong>${e.name}</strong><br>${e.description}<br />`)
-    .addTo(map);
-});
+  }).bindPopup(`<strong>${e.name}</strong><br>${e.description}<br />`),
+);
+const settlementsMarker = L.layerGroup(settlementsArr).addTo(map);
+
+const giftsArr = gifts.map((e) =>
+  L.marker(e.coordinates, {
+    icon: new LeafIcon({ iconUrl: `./images/${e.ico}.svg` }),
+  }).bindPopup(`<strong>${e.name}</strong><br>${e.description}<br />`),
+);
+const giftsMarker = L.layerGroup(giftsArr).addTo(map);
+
+const monasteriesArr = monasteries.map((e) =>
+  L.marker(e.coordinates, {
+    icon: new LeafIcon({ iconUrl: `./images/${e.ico}.svg` }),
+  }).bindPopup(`<strong>${e.name}</strong><br>${e.description}<br />`),
+);
+const monasteriesMarker = L.layerGroup(monasteriesArr).addTo(map);
+
+const foremothersCreationArr = foremothersCreation.map((e) =>
+  L.marker(e.coordinates, {
+    icon: new LeafIcon({ iconUrl: `./images/${e.ico}.svg` }),
+  }).bindPopup(`<strong>${e.name}</strong><br>${e.description}<br />`),
+);
+const foremothersCreationMarker = L.layerGroup(foremothersCreationArr).addTo(map);
+
+const descriptionOfAreaArr = descriptionOfArea.map((e) =>
+  L.marker(e.coordinates, {
+    icon: new LeafIcon({ iconUrl: `./images/${e.ico}.svg` }),
+  }).bindPopup(`<strong>${e.name}</strong><br>${e.description}<br />`),
+);
+const descriptionOfAreaMarker = L.layerGroup(descriptionOfAreaArr).addTo(map);
+
+const battleArr = battle.map((e) =>
+  L.marker(e.coordinates, {
+    icon: new LeafIcon({ iconUrl: `./images/${e.ico}.svg` }),
+  }).bindPopup(`<strong>${e.name}</strong><br>${e.description}<br />`),
+);
+const battleMarker = L.layerGroup(battleArr).addTo(map);
+
+const meetingsArr = meetings.map((e) =>
+  L.marker(e.coordinates, {
+    icon: new LeafIcon({ iconUrl: `./images/${e.ico}.svg` }),
+  }).bindPopup(`<strong>${e.name}</strong><br>${e.description}<br />`),
+);
+const meetingsMarker = L.layerGroup(meetingsArr).addTo(map);
+
+L.control
+  .layers(
+    {},
+    {
+      Поселения: settlementsMarker,
+      Дары: giftsMarker,
+      'Cвятые места и монастыри': monasteriesMarker,
+      'Творения Праматерей': foremothersCreationMarker,
+      Местность: descriptionOfAreaMarker,
+      Битвы: battleMarker,
+      Встречи: meetingsMarker,
+    },
+    { collapsed: false },
+  )
+  .addTo(map);
 
 //remember last position
 var rememberLat = document.getElementById('latitude').value;
