@@ -1,4 +1,4 @@
-const BaseLabel = [
+const settlements = [
   // Земли Ориджин
   {
     name: 'Первая Зима',
@@ -469,7 +469,9 @@ const BaseLabel = [
     coordinates: [76.587, 12.4804],
     ico: 'castle',
   },
-  // Святые места и монастыри
+];
+// Святые места и монастыри
+const monasteries = [
   {
     name: 'Пансион Елены у озера',
     description: '',
@@ -527,7 +529,9 @@ const BaseLabel = [
     coordinates: [-29.1617, -115.224],
     ico: 'monastery',
   },
-  //Творения Праматерей
+];
+//Творения Праматерей
+const foremothersCreation = [
   {
     name: 'Янмейский мост',
     description: '',
@@ -625,7 +629,9 @@ const BaseLabel = [
     coordinates: [36.0624, -140.0537],
     ico: 'progenitor',
   },
-  //Местность
+];
+//Местность
+const descriptionOfArea = [
   {
     name: 'Долина Слепых Дев',
     description:
@@ -646,7 +652,9 @@ const BaseLabel = [
     coordinates: [-38.4128, -76.6415],
     ico: 'question',
   },
-  // Дары
+];
+// Дары
+const gifts = [
   {
     name: 'Дар №10',
     description: '',
@@ -666,7 +674,9 @@ const BaseLabel = [
     coordinates: [75.7142, 14.1064],
     ico: 'spiral',
   },
-  // Битвы
+];
+// Битвы
+const battle = [
   {
     name: 'Нападение на форт',
     description: '',
@@ -772,7 +782,9 @@ const BaseLabel = [
     coordinates: [-49.6427, -47.2412],
     ico: 'battle',
   },
-  // Встречи
+];
+// Встречи
+const meetings = [
   {
     name: 'Встреча Джоакина с Ионой',
     description: '',
