@@ -27,15 +27,15 @@ var bounds = [
 var map = new L.Map('map', { maxBounds: bounds });
 
 // шкала
-var scale = L.control.scale({
-  position: 'topleft',
-  maxWidth: 100,
-  metric: false,
-  imperial: true,
-  updateWhenIdle: true,
-}); // Creating scale control
+// var scale = L.control.scale({
+//   position: 'topleft',
+//   maxWidth: 100,
+//   metric: false,
+//   imperial: true,
+//   updateWhenIdle: true,
+// }); // Creating scale control
 
-scale.addTo(map); // Adding scale control to the map
+// scale.addTo(map); // Adding scale control to the map
 //шкала
 
 L.tileLayer(image + '/{z}-{x}-{y}.jpg', {
