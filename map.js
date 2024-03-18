@@ -17,8 +17,7 @@ var east = (180 / Math.PI) * (rx / radius);
 var north = 85.05;
 var south = (360 / Math.PI) * (Math.atan(Math.exp(ry / radius)) - Math.PI / 4);
 var rc = (tileWidth / 2 + ry) / 2;
-var centerLat =
-  (360 / Math.PI) * (Math.atan(Math.exp(rc / radius)) - Math.PI / 4);
+var centerLat = (360 / Math.PI) * (Math.atan(Math.exp(rc / radius)) - Math.PI / 4);
 var centerLon = (west + east) / 2;
 var bounds = [
   [south, west],
@@ -27,6 +26,18 @@ var bounds = [
 
 var map = new L.Map('map', { maxBounds: bounds });
 
+// шкала
+// var scale = L.control.scale({
+//   position: 'topleft',
+//   maxWidth: 100,
+//   metric: false,
+//   imperial: true,
+//   updateWhenIdle: true,
+// }); // Creating scale control
+
+// scale.addTo(map); // Adding scale control to the map
+//шкала
+
 L.tileLayer(image + '/{z}-{x}-{y}.jpg', {
   maxZoom: maxLevel,
   minZoom: minLevel,
@@ -34,8 +45,7 @@ L.tileLayer(image + '/{z}-{x}-{y}.jpg', {
   zIndex: 1,
   noWrap: true,
   bounds: bounds,
-  attribution:
-    '<a href="https://github.com/oliverheilig/LeafletPano">LeafletPano</a>',
+  attribution: '<a href="https://github.com/oliverheilig/LeafletPano">LeafletPano</a>',
 }).addTo(map);
 
 var zoom = map.getBoundsZoom(bounds);
@@ -56,13 +66,70 @@ var LeafIcon = L.Icon.extend({
 
 var castle = new LeafIcon({ iconUrl: './images/castle.png' });
 
-BaseLabel.map((e) => {
+const settlementsArr = settlements.map((e) =>
   L.marker(e.coordinates, {
     icon: new LeafIcon({ iconUrl: `./images/${e.ico}.svg` }),
-  })
-    .bindPopup(`<strong>${e.name}</strong><br>${e.description}<br />`)
-    .addTo(map);
-});
+  }).bindPopup(`<strong>${e.name}</strong><br>${e.description}<br />`),
+);
+const settlementsMarker = L.layerGroup(settlementsArr).addTo(map);
+
+const giftsArr = gifts.map((e) =>
+  L.marker(e.coordinates, {
+    icon: new LeafIcon({ iconUrl: `./images/${e.ico}.svg` }),
+  }).bindPopup(`<strong>${e.name}</strong><br>${e.description}<br />`),
+);
+const giftsMarker = L.layerGroup(giftsArr).addTo(map);
+
+const monasteriesArr = monasteries.map((e) =>
+  L.marker(e.coordinates, {
+    icon: new LeafIcon({ iconUrl: `./images/${e.ico}.svg` }),
+  }).bindPopup(`<strong>${e.name}</strong><br>${e.description}<br />`),
+);
+const monasteriesMarker = L.layerGroup(monasteriesArr).addTo(map);
+
+const foremothersCreationArr = foremothersCreation.map((e) =>
+  L.marker(e.coordinates, {
+    icon: new LeafIcon({ iconUrl: `./images/${e.ico}.svg` }),
+  }).bindPopup(`<strong>${e.name}</strong><br>${e.description}<br />`),
+);
+const foremothersCreationMarker = L.layerGroup(foremothersCreationArr).addTo(map);
+
+const descriptionOfAreaArr = descriptionOfArea.map((e) =>
+  L.marker(e.coordinates, {
+    icon: new LeafIcon({ iconUrl: `./images/${e.ico}.svg` }),
+  }).bindPopup(`<strong>${e.name}</strong><br>${e.description}<br />`),
+);
+const descriptionOfAreaMarker = L.layerGroup(descriptionOfAreaArr).addTo(map);
+
+const battleArr = battle.map((e) =>
+  L.marker(e.coordinates, {
+    icon: new LeafIcon({ iconUrl: `./images/${e.ico}.svg` }),
+  }).bindPopup(`<strong>${e.name}</strong><br>${e.description}<br />`),
+);
+const battleMarker = L.layerGroup(battleArr).addTo(map);
+
+const meetingsArr = meetings.map((e) =>
+  L.marker(e.coordinates, {
+    icon: new LeafIcon({ iconUrl: `./images/${e.ico}.svg` }),
+  }).bindPopup(`<strong>${e.name}</strong><br>${e.description}<br />`),
+);
+const meetingsMarker = L.layerGroup(meetingsArr).addTo(map);
+
+L.control
+  .layers(
+    {},
+    {
+      Поселения: settlementsMarker,
+      Дары: giftsMarker,
+      'Cвятые места и монастыри': monasteriesMarker,
+      'Творения Праматерей': foremothersCreationMarker,
+      Местность: descriptionOfAreaMarker,
+      Битвы: battleMarker,
+      Встречи: meetingsMarker,
+    },
+    { collapsed: false },
+  )
+  .addTo(map);
 
 //remember last position
 var rememberLat = document.getElementById('latitude').value;
